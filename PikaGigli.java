@@ -16,8 +16,11 @@ public class PikaGigli {
 
 				if(t==1){
 					System.out.println("[TURNO DE PIKACHU]");
+					do {
+						A = new Scanner(System.in).nextInt();
+			
+					} while (A<0 || A>100);
 					
-					A = new Scanner(System.in).nextInt();
 					
 					System.out.println("Pikachu ataco a Gigli");
 					
