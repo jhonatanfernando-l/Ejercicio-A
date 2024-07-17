@@ -12,26 +12,34 @@ public class PikaGigli {
 			
 			while(pika>0 && gigli >0){
 				
-					System.out.print("ingresar ataque");
+					System.out.println("ingresar valor de ataque");
 					A = new Scanner(System.in).nextInt();
 
 				
 				if(t==1){
-					System.out.println(" ataque gigli");
-					System.out.println("turno de gigli");
+					System.out.println("Pikachu ataco a Gigli");
+					
 					gigli = gigli - A;
+					
+					System.out.println("Vida actual de Gigli: " + gigli);
+					System.out.println("[TURNO DE GIGLIPUF]");
+
 					t=0;
 				}else{
-					System.out.println("ataque pika");
-					System.out.println("turno pika");
+					System.out.println("Gigli ataco a Pikachu");
+					
 					pika = pika - A;
+					
+					System.out.println("Vida actual de Pikachu" + pika);
+					System.out.println("[TURNO DE PIKACHU]");
+
 					t=1;
 				}
 			}
 			if(pika<=0){
-				System.out.print("----------------giglipuf gana----------------------");
+				System.out.print("----------------GANADOR GLIGLIPUF----------------------");
 			}else{
-				System.out.print("----------------pikachu gana-----------------------");
+				System.out.print("----------------GANADOR PIKACHU-----------------------");
 			}
 		
 		
