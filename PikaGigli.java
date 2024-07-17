@@ -12,34 +12,42 @@ public class PikaGigli {
 			
 			while(pika>0 && gigli >0){
 				
-					System.out.println("ingresar valor de ataque");
-					A = new Scanner(System.in).nextInt();
 
-				
+
 				if(t==1){
+					System.out.println("[TURNO DE PIKACHU]");
+					
+					A = new Scanner(System.in).nextInt();
+					
 					System.out.println("Pikachu ataco a Gigli");
 					
 					gigli = gigli - A;
 					
-					System.out.println("Vida actual de Gigli: " + gigli);
-					System.out.println("[TURNO DE GIGLIPUF]");
+					System.out.println("Vida actual de Giglipuf: " + gigli+" HP");
+					
 
 					t=0;
 				}else{
+					System.out.println("[TURNO DE GIGLIPUF]");
+					
+					A = new Scanner(System.in).nextInt();
+					
 					System.out.println("Gigli ataco a Pikachu");
 					
 					pika = pika - A;
 					
-					System.out.println("Vida actual de Pikachu" + pika);
-					System.out.println("[TURNO DE PIKACHU]");
+					System.out.println("Vida actual de Pikachu: " + pika+" HP" );
+					
 
 					t=1;
 				}
 			}
 			if(pika<=0){
-				System.out.print("----------------GANADOR GLIGLIPUF----------------------");
+				System.out.println("PICACHU ESTA FUERA DE COMBATE");
+				System.out.println("----------------¡GANADOR GLIGLIPUF!----------------------");
 			}else{
-				System.out.print("----------------GANADOR PIKACHU-----------------------");
+				System.out.println("GIGLIPUF ESTA FUERA DE COMBATE");
+				System.out.println("----------------¡GANADOR PIKACHU!-----------------------");
 			}
 		
 		
